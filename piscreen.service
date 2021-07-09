@@ -1,0 +1,12 @@
+[Unit]
+Description=Pi Screen
+
+[Service]
+Type=simple
+User=pi
+Restart=always
+RestartSec=1
+ExecStart=/bin/bash /usr/local/bin/piscreen
+
+[Install]
+WantedBy=multi-user.target
