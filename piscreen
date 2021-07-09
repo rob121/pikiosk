@@ -1,0 +1,7 @@
+#!/bin/sh
+
+unclutter -display :0 -noevents -grab &
+DISPLAY=:0 xset -dpms			# turn off display power management system
+DISPLAY=:0 xset s noblank		# turn off screen blanking
+DISPLAY=:0 xset s off			# turn off screen saver
+DISPLAY=:0 chromium-browser  --noerrdialogs --disable-infobars --kiosk $URL
